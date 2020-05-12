@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+
 class Categoria(models.Model):
     id= models.AutoField(primary_key=True)
     nombre=models.CharField('Categoria',max_length=200,blank=False,null=False)

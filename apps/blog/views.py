@@ -27,8 +27,8 @@ class Programacion(ListView):
     model=Post
     template_name='programacion.html'
     queryset=Post.objects.filter(
-        estado=True,
-        categoria=Categoria.objects.get(nombre='Programacion')
+        Q(estado=True),
+        Q(categoria=Categoria.objects.get(nombre__iexact='Programacion'))
     )
     context_object_name='post'
 
@@ -36,8 +36,8 @@ class Tecnologia(ListView):
     model=Post
     template_name='tecnologia.html'
     queryset=Post.objects.filter(
-        estado=True,
-        categoria=Categoria.objects.get(nombre='Tecnologia')
+        Q(estado=True),
+        Q(categoria=Categoria.objects.get(nombre__iexact='Tecnologia'))
     )
     context_object_name='post'
 
