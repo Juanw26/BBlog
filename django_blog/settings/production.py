@@ -9,7 +9,7 @@ from .base import *
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'bootstrapblog1.herokuapp.com',
+    'bootstrapblog2.herokuapp.com',
   
 ]
 
