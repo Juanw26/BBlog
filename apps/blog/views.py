@@ -36,7 +36,7 @@ class Programacion(ListView):
 class Tecnologia(ListView):
     model=Post
     template_name='tecnologia.html'
-    querysets = Post.objects.filter(
+    queryset = Post.objects.filter(
             estado = True,
             categoria = Categoria.objects.get(nombre__iexact = 'Tecnologia'),
         ).distinct()
