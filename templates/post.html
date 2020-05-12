@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+{{post.titulo}}
+{% endblock title %}
+{% block imagen %}
+    
+{% endblock imagen %}
+{% block content %}
+<div style="padding-right: 300px;padding-left: 300px;padding-top: 15px;">{{ post.contenido|safe}}</div>
+
+{% endblock content %} 
+
+{% block barra_busqueda %}
+{% endblock barra_busqueda %}
