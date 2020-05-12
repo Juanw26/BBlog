@@ -19,10 +19,10 @@ ALLOWED_HOSTS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'d7841ipoh2bco6',
-        'USER':'intbreerpnutce',
-        'PASSWORD':'4cc43b06d35f906d383aac8aa230aba71c293d7d5e95cfe38b606a702e8b4898',
-        'HOST':'ec2-18-215-99-63.compute-1.amazonaws.com',
+        'NAME':'d6fv2nmuh15aiq',
+        'USER':'soxglqposhfsxl',
+        'PASSWORD':'6871fefef436fffdb660fc6d5d664eda51af9b4c1f6cba7a32bce2fb212e2550',
+        'HOST':'ec2-52-202-22-140.compute-1.amazonaws.com',
         'POST':5432,
     }
 }
