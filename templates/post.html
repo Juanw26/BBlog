@@ -2,11 +2,13 @@
 {% load static %}
 
 {% block title %}
-{{post.titulo}}
+<p>{{post.titulo}}</p>
 {% endblock title %}
+
 {% block imagen %}
-{{ post.imagen}}<
+<img src="{{ post.imagen}}" alt="">
 {% endblock imagen %}
+
 {% block content %}
 <div style="padding-right: 300px;padding-left: 300px;padding-top: 15px;">{{ post.contenido|safe}}</div>
 
