@@ -43,11 +43,5 @@ class Tecnologia(ListView):
 
 def post(request,slug):
     queryset=Post.objects.get(slug=slug)
-
-    if queryset:
-        return render(request,'post.html',{'post':queryset})
-    else:
-        return render(request,'post.html',)
-
-    
+    return render(request,'post.html',{'post':queryset})
 
