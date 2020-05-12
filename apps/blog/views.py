@@ -26,32 +26,20 @@ class Index(View):
 class Programacion(ListView):
     model=Post
     template_name='programacion.html'
+    queryset=Post.objects.filter(
+        estado=True,
+        categoria=Categoria.objects.get(nombre__iexact='Programacion')   
+    )
     context_object_name='post'
-    
-    def get_queryset(self):
-        queryset = Post.objects.filter(
-            estado = True,
-            categoria = Categoria.objects.get(nombre__iexact = 'Tecnologia'),
-        )
-        return queryset
-    
 
 class Tecnologia(ListView):
     model=Post
     template_name='tecnologia.html'
-    context_object_name='post'
-
-    def get_queryset(self):
-        queryset = Post.objects.filter(
+    queryset = Post.objects.filter(
             estado = True,
             categoria = Categoria.objects.get(nombre__iexact = 'Tecnologia'),
         )
-        return queryset
-
-
-
-    
-    
+    context_object_name='post'
 
 def post(request,slug):
     queryset=Post.objects.get(slug=slug)
