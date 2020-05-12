@@ -28,8 +28,8 @@ class Programacion(ListView):
     template_name='programacion.html'
     queryset=Post.objects.filter(
         estado=True,
-        categoria=Categoria.objects.get(nombre__iexact='Programacion')   
-    ).distinct()
+        #categoria=Categoria.objects.get(nombre__iexact='Programacion')   
+    )
     
     context_object_name='post'
 
@@ -38,8 +38,8 @@ class Tecnologia(ListView):
     template_name='tecnologia.html'
     queryset = Post.objects.filter(
             estado = True,
-            categoria = Categoria.objects.get(nombre__iexact = 'Tecnologia'),
-        ).distinct()
+            #categoria = Categoria.objects.get(nombre__iexact = 'Tecnologia'),
+        )
     context_object_name='post'
 
 def post(request,slug):
