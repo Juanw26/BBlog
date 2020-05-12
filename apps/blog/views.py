@@ -27,22 +27,19 @@ class Programacion(ListView):
     model=Post
     template_name='programacion.html'
     queryset=Post.objects.filter(
-        Q(
         estado=True,
-        categoria=Categoria.objects.get(nombre__iexact='Programacion')
-        )
-    )
+        categoria=Categoria.objects.get(nombre__iexact='Programacion')   
+    ).distinct()
+    
     context_object_name='post'
 
 class Tecnologia(ListView):
     model=Post
     template_name='tecnologia.html'
-    queryset=Post.objects.filter(
-        Q(
-        estado=True,
-        categoria=Categoria.objects.get(nombre__iexact='Tecnologia')
-        )
-    )
+    querysets = Post.objects.filter(
+            estado = True,
+            categoria = Categoria.objects.get(nombre__iexact = 'Tecnologia'),
+        ).distinct()
     context_object_name='post'
 
 def post(request,slug):
